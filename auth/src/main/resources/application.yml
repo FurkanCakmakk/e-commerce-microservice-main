@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: auth
+  datasource:
+    url: jdbc:mysql://localhost:3306/e-commerce-user?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: furkan2023
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8092
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

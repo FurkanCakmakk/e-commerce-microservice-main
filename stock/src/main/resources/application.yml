@@ -1,0 +1,23 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: stock
+  datasource:
+    url: jdbc:mysql://localhost:3306/e-commerce-stock?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: furkan2023
+    driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8091
+
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
